@@ -1,0 +1,13 @@
+---
+import { getEntryBySlug } from 'astro:content';
+import Layout from '../layouts/Layout.astro';
+
+const oneBlogPost = await getEntryBySlug('blog', 'test');
+console.log(oneBlogPost)
+---
+
+<Layout title="Welcome to Astro.">
+	<div class="container">
+    <h1>{oneBlogPost.data.title}</h1>
+  </div>
+</Layout>
