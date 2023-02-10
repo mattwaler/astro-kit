@@ -1,16 +1,15 @@
 ---
 import { getEntryBySlug } from 'astro:content';
 import Layout from '../layouts/Layout.astro';
-import Test from '../components/Test';
+import ShowMessage from '../components/ShowMessage';
+import EditMessage from '../components/EditMessage';
 
 const oneBlogPost = await getEntryBySlug('blog', 'test');
-console.log(oneBlogPost)
 ---
 
 <Layout title="Welcome to Astro.">
-	<div class="container">
-    <h1>{oneBlogPost.data.title}</h1>
-    <Test client:load />
-    <Test client:load />
+	<div class="container py-24">
+    <EditMessage client:visible />
+    <ShowMessage client:visible />
   </div>
 </Layout>
