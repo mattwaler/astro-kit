@@ -7,6 +7,7 @@ Welcome to the best static site generator on the market.
 This project uses the following frameworks:
 
 - [Astro](https://astro.build/)
+- [Preact](https://preactjs.com/)
 - [TailwindCSS](https://tailwindcss.com/)
 
 ## ⭐️ Requirements
